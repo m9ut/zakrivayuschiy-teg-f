@@ -1,0 +1,114 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+}
+
+.page {
+  color: var(--text-color);
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var( --main-font, sans-serif);
+  font-variation-settings: "wght" var(--main-font-weight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color);
+}
+
+.header__title {
+
+
+}
+
+.header__paragraph {
+
+}
+
+.header__theme-menu{
+
+}
+          
+.theme-menu__list{
+  display: grid;
+  gap: 12px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-inline-size: 700px;
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.cards__list-item {
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color);
+}
+
+.card__list-title {
+  border-block-end: 2px solid var(--text-color);
+
+  font-size: 18px;
+  line-height: 21.78px;
+  font-variation-settings: "wght" var(--header-font-weight);
+}
+
+.card__image {
+  position: relative;
+}
+
+.image-watermark {
+
+}
+
+
+.card__text {
+  display: grid;
+  border-block-start: 2px solid var(--text-color);
+
+  font-size: 18px;
+  line-height: 21px;
+  gap: 27px;
+}
+
+
+.card__icon-button {       
+
+}
+

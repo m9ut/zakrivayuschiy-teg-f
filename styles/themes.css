@@ -1,0 +1,44 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+:root.theme-light{
+    --text-color: var(--dark);
+    --background-color: var(--light);
+  
+    --main-font-weight: 400;
+    --header-font-weight: 700;
+  
+    --background-image: ;
+  
+    --button-color: var(--dark);
+  }
+  
+  :root.theme-dark{
+    --text-color: var(--accent);
+    --background-color: var(--dark);
+  
+    --main-font-weight: 465;
+    --header-font-weight: 785;
+  
+    --background-image: ;
+  
+    --button-color: var(--accent);
+  }
+  
+  @media(prefers-color-scheme: dark){
+    :root{
+        --text-color: var(--accent);
+        --background-color: var(--dark);
+      
+        --main-font-weight: 465;
+        --header-font-weight: 785;
+      
+        --background-image: ;
+      
+        --button-color: var(--accent);
+    }
+  }

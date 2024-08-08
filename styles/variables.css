@@ -1,0 +1,21 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root{
+    --dark: #000;
+    --light: #fff;
+    --accent: #00cc14;
+  
+    --text-color: var(--dark);
+    --background-color: var(--light);
+    
+    --main-font: "Inter-Variable", sans-serif;
+    --main-font-weight: 400;
+    --secondary-font: "PressStart2P", fantasy;
+    --header-font-weight: 700;
+  
+    --background-image: ;
+  
+    --like-border-color: var(--);
+    --like-color: ;
+    --button-color: var(--dark);
+  }
