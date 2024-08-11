@@ -33,28 +33,40 @@
   align-items: center;
 }
 
-.header{
+.header {
+  margin: 102px;
+  padding: 120px 125px 0;
 
+  inline-size: 696px;
+  
   font-family: var(--secondary-font);
   text-transform: uppercase;
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__title {
-
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 
 }
 
 .header__paragraph {
-
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-.header__theme-menu{
-
+.header__theme-menu {
+ 
 }
           
-.theme-menu__list{
+.theme-menu__list {
+  padding: 25px;
   display: grid;
   gap: 12px;
 
@@ -62,7 +74,63 @@
   justify-content: center;
 }
 
+.theme-menu__button {
+  position: relative;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  
+}
 
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+ 
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::before {
+  position: absolute;
+  content: "▶";
+  margin-left: -12px;
+  color: transparent;
+ 
+}
+
+.theme-menu__button:disabled::before {
+  pointer-events: none;
+  color: currentColor;
+  opacity: 0.6;
+  animation: arrowhead 0.5s infinite ease-in-out alternate;
+}
+
+.theme-menu__button::after {
+  position: absolute;
+  display: block;
+   
+  block-size: 2px;
+  content: "";
+  
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.theme-menu__button:focus-visible::after{
+  transform: scaleX(1);
+  inline-size: 85%;
+}
 
 .card {
   display: flex;
@@ -70,15 +138,17 @@
   max-inline-size: 700px;
 }
 
-.cards__list {
+.card__list {
   display: flex;
   flex-direction: column;
   gap: 52px;
 }
 
-.cards__list-item {
+.card__list-item {
+  background-color: var(--background-color);
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
+  
 }
 
 .card__list-title {
@@ -94,11 +164,27 @@
 }
 
 .image-watermark {
-
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  text-transform: uppercase;
+  mix-blend-mode: hard-light; 
+  text-shadow: 1px 0 0 var(--background-color), -1px 0 0 var(--background-color), 0px 1px 0 var(--background-color), 0px -1px 0 var(--background-color);
 }
 
+.image {
+  display: block;
+  object-position: center;
+  object-fit: cover;
+  inline-size: 100%;
+}
 
 .card__text {
+  padding: 25px;
   display: grid;
   border-block-start: 2px solid var(--text-color);
 
@@ -107,8 +193,79 @@
   gap: 27px;
 }
 
+.card__footer {
+  display: flex;
+  justify-content: flex-end;  
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+  gap: 5px;
+}
 
 .card__icon-button {       
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--text-color);
+  transition: border 0.5s ease;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  font-family: var(--secondary-font);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color);
 
 }
 
+.button::before {
+  position: absolute;
+  content: "";
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inset-inline-start: 0px;
+  inset-block-start: 0px;
+  block-size: 100%;
+  inline-size: 100%;
+  background: var(--text-color);
+  color: var(--background-color);
+  
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  color: var(--button-color);
+  mix-blend-mode: difference;
+}
+
+.card__like-button {
+inline-size: 130px;
+}
+
+
+
+.like-icon {
+
+}
+
+@media (width <= 375px) { }

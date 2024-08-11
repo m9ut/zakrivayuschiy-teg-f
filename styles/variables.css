@@ -17,5 +17,5 @@
   
     --like-border-color: var(--);
     --like-color: ;
-    --button-color: var(--dark);
+    --button-color: var(--text-color);
   }
