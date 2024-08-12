@@ -25,7 +25,7 @@
   background-color: var(--background-color);
   background-size: cover;
   background-attachment: fixed;
-  font-family: var( --main-font, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" var(--main-font-weight);
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   padding: 120px 125px 0;
 
   inline-size: 696px;
-  
+
   font-family: var(--secondary-font);
   text-transform: uppercase;
   border: 2px solid var(--text-color);
@@ -61,10 +61,8 @@
   line-height: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-.header__theme-menu {
- 
-}
-          
+.header__theme-menu {}
+
 .theme-menu__list {
   padding: 25px;
   display: grid;
@@ -80,13 +78,13 @@
   border: none;
   text-transform: uppercase;
   font-size: 14px;
-  
+
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
   cursor: pointer;
- 
+
 }
 
 .theme-menu__button:disabled {
@@ -104,7 +102,7 @@
   content: "▶";
   margin-left: -12px;
   color: transparent;
- 
+
 }
 
 .theme-menu__button:disabled::before {
@@ -117,17 +115,17 @@
 .theme-menu__button::after {
   position: absolute;
   display: block;
-   
+
   block-size: 2px;
   content: "";
-  
+
   background-color: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 300ms ease;
 }
 
-.theme-menu__button:focus-visible::after{
+.theme-menu__button:focus-visible::after {
   transform: scaleX(1);
   inline-size: 85%;
 }
@@ -148,12 +146,11 @@
   background-color: var(--background-color);
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
-  
+
 }
 
 .card__list-title {
   border-block-end: 2px solid var(--text-color);
-
   font-size: 18px;
   line-height: 21.78px;
   font-variation-settings: "wght" var(--header-font-weight);
@@ -163,7 +160,46 @@
   position: relative;
 }
 
+.img {
+  filter: brightness(200%);
+} 
+
+.img1 {
+  filter: contrast(75%);
+} 
+
+.img2 {
+  filter: blur(0.3rem);
+} 
+
+.img3 {
+  filter: sepia(80%);
+} 
+
+.img4 {
+  filter: invert(90%);
+} 
+
+.img5 {
+  filter: invert(1) brightness(200%) saturate(60%) hue-rotate(90deg);
+} 
+
+.img6 {
+  filter: hue-rotate(90deg);
+} 
+
+/*
+
+sepia()
+
+invert()
+
+drop-shadow()
+
+*/
+
 .image-watermark {
+  z-index: 1;
   inset-inline-end: 25px;
   inset-block-start: 25px;
   position: absolute;
@@ -172,7 +208,7 @@
   font-family: var(--secondary-font);
   color: var(--text-color);
   text-transform: uppercase;
-  mix-blend-mode: hard-light; 
+  mix-blend-mode: hard-light;
   text-shadow: 1px 0 0 var(--background-color), -1px 0 0 var(--background-color), 0px 1px 0 var(--background-color), 0px -1px 0 var(--background-color);
 }
 
@@ -195,13 +231,13 @@
 
 .card__footer {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
   margin-block-end: 25px;
   margin-inline-end: 25px;
   gap: 5px;
 }
 
-.card__icon-button {       
+.card__icon-button {
   background-color: transparent;
   border: transparent;
   cursor: pointer;
@@ -246,7 +282,7 @@
   inline-size: 100%;
   background: var(--text-color);
   color: var(--background-color);
-  
+
 }
 
 .button:hover::before {
@@ -259,13 +295,58 @@
 }
 
 .card__like-button {
-inline-size: 130px;
+  inline-size: 130px;
 }
 
-
-
-.like-icon {
-
+.submit__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 52px;
+  margin-block-end: 103px;
+  gap: 5px;
+  height: 55px;
+  width: 335px;
 }
 
-@media (width <= 375px) { }
+.submit__icon {
+  color: var(--button-color);
+  mix-blend-mode: difference;
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.modal {
+  width: 353px;
+  height: 191px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+}
+
+.modal[open] {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+}
+
+.modal__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__text {
+  font-size: 14px;
+  font-size: 14px;
+  line-height: 21px;
+  inline-size: 234px;
+}
+
+.modal__button {
+  inline-size: 100%;
+  text-transform: uppercase;
+  padding: 12px 0px;
+}
+
+@media (width <=375px) {}

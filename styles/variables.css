@@ -15,7 +15,7 @@
   
     --background-image: ;
   
-    --like-border-color: var(--);
-    --like-color: ;
+    --like-border-color: var(--text-color);
+    --like-color: #FF0000;
     --button-color: var(--text-color);
   }
