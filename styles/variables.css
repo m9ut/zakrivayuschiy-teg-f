@@ -4,17 +4,13 @@
     --dark: #000;
     --light: #fff;
     --accent: #00cc14;
-  
     --text-color: var(--dark);
     --background-color: var(--light);
-    
-    --main-font: "Inter-Variable", sans-serif;
-    --main-font-weight: 400;
-    --secondary-font: "PressStart2P", fantasy;
+    --first-font: "Inter-Variable", sans-serif;
+    --first-font-weight: 400;
+    --accent-font: "PressStart2P", cursive;
     --header-font-weight: 700;
-  
-    --background-image: ;
-  
+    --background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #e7e7e7 0 2px, #1a1a1a 2px 4px);;
     --like-border-color: var(--text-color);
     --like-color: #FF0000;
     --button-color: var(--text-color);

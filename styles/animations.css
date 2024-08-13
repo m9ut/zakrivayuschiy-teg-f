@@ -14,31 +14,30 @@
 */
 
 @keyframes arrowhead {
-    0% {
-        transform: translate(0);
-      }
-      100% {
-        transform: translate(4px);
-      }
+  0% {
+      transform: translate(0);
+    }
+  100% {
+      transform: translate(4px);
+    }
 }
 
-@keyframes heart {
-  from {
-transform: scale(1);
+@keyframes heartSparks {
+  0% {
+    transform: scale(1);
   }
-
-to {
-  transform: scale(2);
+  100% {
+      transform: scale(2);
+  }
 }
-}
 
-@keyframes sparks {
+@keyframes sparksBoom {
   from {
     opacity: 0;
-  } 
+    } 
   to {
-    opacity: 1;
-  }
+      opacity: 1;
+    }
 }
 
 .contour {
@@ -50,23 +49,24 @@ to {
   fill: var(--like-color);
   opacity: 0;
 }
-.main-body{
+
+.main-body {
   fill: var(--background-color);
   transition: fill 0.3s linear;
 }
 
-.core{
+.core {
   fill: var(--background-color);
   transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--text-color);
+  fill: var(--like-border-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover .core {
-  fill: var(--text-color);
+  fill: var(--like-border-color);
   transition: fill 0.3s linear;
 }
 
@@ -96,9 +96,9 @@ to {
 }
 
 .like-icon.is-liked .sparks{
-  animation: sparks 300ms ease-in 300ms alternate;
+  animation: sparksBoom 0.3s ease-in 0.3s alternate;
 }
 
 .like-icon.is-liked .heart {
-  animation: heart 300ms ease-in 100ms alternate;
+  animation: heartSparks 0.3s ease-in 0.1s alternate;
 }
