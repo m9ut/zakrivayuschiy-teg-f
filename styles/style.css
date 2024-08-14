@@ -1,3 +1,12 @@
+@supports (
+  (-webkit-text-stroke: 1px var(--text-stroke-color)) or
+    (text-stroke: 1px var(--text-stroke-color))
+) {
+  .card__imges__label {
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -309,7 +318,7 @@
   inline-size: 234px;
 }
 
-.modal__dialog-button  {
+.modal__dialog-button {
   inline-size: 293px;
   text-transform: uppercase;
   padding: 12px 0px;
