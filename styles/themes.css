@@ -16,8 +16,8 @@
     --button-color: var(--text-color);
   }
   
-  @media(prefers-color-scheme: dark){
-    :root{
+  @media(prefers-color-scheme: dark) {
+    :root {
         --text-color: var(--accent);
         --background-color: var(--dark);
         --first-font-weight: 465;
