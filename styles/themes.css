@@ -17,7 +17,7 @@
   :root.theme-dark{
     --text-color: var(--accent);
     --background-color: var(--dark);
-    --main-font-weight: 465;
+    --first-font-weight: 465;
     --header-font-weight: 785;
     --background-image: repeating-linear-gradient(to right, #000, transparent 2px), repeating-linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
     --button-color: var(--text-color);

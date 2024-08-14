@@ -284,7 +284,7 @@
   mix-blend-mode: difference;
 }
 
-.submit__button {
+.window__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,14 +295,14 @@
   width: 338px;
 }
 
-.submit__icon {
+.window__icon {
   color: var(--button-color);
   mix-blend-mode: difference;
   inline-size: 21px;
   block-size: 21px;
 }
 
-.modal {
+.modal__window-form {
   width: 353px;
   height: 191px;
   background-color: var(--background-color);
@@ -310,13 +310,13 @@
   font-family: var(--accent-font);
 }
 
-.modal[open] {
+.modal__window-form[open] {
   display: grid;
   gap: 30px;
   justify-content: center;
 }
 
-.modal__container {
+.modal__window {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -328,7 +328,7 @@
   inline-size: 234px;
 }
 
-.modal__button {
+.modal__dialog-button  {
   inline-size: 293px;
   text-transform: uppercase;
   padding: 12px 0px;
@@ -344,13 +344,13 @@
     inset-inline-end: 10px;
   }
 
-  .submit__button {
+  .window__button {
     width: 306px;
     height: 84px;
     flex-direction: column;
   }
   
-  .submit__icon {
+  .window__icon {
     inline-size: 31px;
     block-size: 31px;
   }
