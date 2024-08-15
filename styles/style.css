@@ -145,6 +145,7 @@
   object-position: center;
   object-fit: cover;
   inline-size: 100%;
+  block-size: 696px;
 }
 
 .image-watermark {
@@ -208,8 +209,9 @@
 }
 
 .card__icon-button {
+  border: 2px solid transparent;
+  padding: 0; 
   background-color: transparent;
-  border: transparent;
   cursor: pointer;
 }
 
@@ -219,7 +221,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
-  transition: border 0.5s ease;
 }
 
 .button {
@@ -269,14 +270,14 @@
 }
 
 .window__button {
+  min-inline-size: 335px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-block-start: 52px;
-  margin-block-end: 103px;
-  gap: 7px;
-  height: 55px;
-  width: 338px;
+  margin-block-end: 100px;
+  gap: 8px;
 }
 
 .window__icon {
@@ -288,7 +289,8 @@
 
 .modal__window-form {
   padding: 30px;
-  width: 353px;
+  max-width: 357px;
+  max-height: 191px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -310,6 +312,11 @@
   gap: 20px;
 }
 
+.modal-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .modal__text {
   font-size: 14px;
   line-height: 21px;
@@ -317,7 +324,7 @@
 }
 
 .modal__dialog-button {
-  inline-size: 293px;
+  inline-size: 100%;
   text-transform: uppercase;
   padding: 12px 0px;
 }
@@ -330,6 +337,10 @@
 @media (width <=375px) {
   .header__decoration {
       margin-block-start: 120px;
+  }
+
+  .image {
+    block-size: 371px;
   }
 
   .image-watermark {
