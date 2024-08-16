@@ -193,6 +193,7 @@
 
 .card__footer {
   display: flex;
+  gap: 5px;
   justify-content: flex-end;
   margin-block-end: 20px;
   margin-inline-end: 25px;
@@ -221,6 +222,7 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
+  transition: border-color 0.3s ease;
 }
 
 .button {
@@ -265,7 +267,7 @@
 }
 
 .button__text {
-  color: var(--background-color);
+  color: var(--button-color);
   mix-blend-mode: difference;
 }
 
@@ -281,16 +283,14 @@
 }
 
 .window__icon {
-  color: var(--background-color);
+  color: var(--button-color);
   mix-blend-mode: difference;
   inline-size: 21px;
   block-size: 21px;
 }
 
 .modal__window-form {
-  padding: 30px;
-  max-width: 357px;
-  max-height: 191px;
+  padding: 30px 30px 20px 30px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -325,8 +325,9 @@
 
 .modal__dialog-button {
   inline-size: 100%;
+  min-width: 100%;
   text-transform: uppercase;
-  padding: 12px 0px;
+  padding: 12.5px;
 }
 
 .modal__window-form::backdrop {
