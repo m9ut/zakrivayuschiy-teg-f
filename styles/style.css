@@ -278,7 +278,6 @@
 }
 
 .window__button {
-  min-inline-size: 335px;
   padding: 15px 20px;
   display: flex;
   align-items: center;
@@ -345,12 +344,21 @@
 }
 
 @media (width <=375px) {
+
+  .header__decoration {
+    margin-block-start: 7.4rem;
+  }
+
+  .theme-menu__button::before {
+    margin-block-start: 0.5px;
+  }
+
   .header__decoration {
       margin-block-start: 120px;
   }
 
   .image {
-      block-size: 371px;
+      min-block-size: 375px;
   }
 
   .image-watermark {
@@ -358,13 +366,25 @@
   }
 
   .window__button {
-      width: 306px;
-      height: 84px;
-      flex-direction: column;
+    flex-direction: column;
+    padding: 15px 20px;
   }
 
   .window__icon {
       inline-size: 31px;
       block-size: 31px;
+  }
+
+  .modal__window-form  {
+    min-inline-size: 341px;
+  }
+
+  .modal__text {
+    max-inline-size: 198px;
+  }
+  
+  .modal__dialog-button {
+    max-inline-size: 257px;
+    max-block-size: 38px;
   }
 }
