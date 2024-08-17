@@ -25,9 +25,13 @@
   }
 }
 
+.heart {
+  transition: fill 0.1s linear;
+  transform-origin: center;
+}
+
 .contour {
   fill: var(--like-border-color);
-  transition: fill 0.1s linear;
 }
 
 .sparks {
@@ -77,7 +81,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--like-color);
-  transition: fill 0.3s linear 0.6s;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .sparks {

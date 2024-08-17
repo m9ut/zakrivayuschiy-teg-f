@@ -85,19 +85,22 @@
   position: absolute;
   content: "▶";
   color: transparent;
+  right: 100%;
+  top: 2%;
 }
 
 .theme-menu__button:disabled::before {
   pointer-events: none;
   color: currentColor;
   opacity: 0.6;
-  right: 100%;
   animation: arrowhead 0.5s infinite ease-in-out alternate;
 }
 
 .theme-menu__button::after {
   position: absolute;
   display: block;
+  inset-block-start: 14px;
+  inline-size: 100%;
   block-size: 2px;
   content: "";
   background-color: currentColor;
@@ -211,9 +214,14 @@
 
 .card__icon-button {
   border: 2px solid transparent;
-  padding: 0; 
+
+  padding: 0;
   background-color: transparent;
   cursor: pointer;
+  transition: border 300ms ease;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
 }
 
 .card__icon-button:focus {
@@ -222,22 +230,22 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
-  transition: border-color 0.3s ease;
 }
 
 .button {
   position: relative;
+  z-index: 1;
   cursor: pointer;
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
   font-size: 14px;
   font-family: var(--accent-font);
+  transition: box-shadow 300ms ease;
 }
 
 .card__like-button {
-  block-size: 38px;
-  inline-size: 130px;
-  padding: 12px 36px;
+  min-inline-size: 130px;
+  padding: 0px 17px;
 }
 
 .button:focus {
@@ -290,7 +298,8 @@
 }
 
 .modal__window-form {
-  padding: 30px 30px 20px 30px;
+  max-inline-size: 357px;
+  padding: 30px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -309,6 +318,7 @@
 .modal__window {
   display: flex;
   align-items: center;
+  max-inline-size: 293px;
   gap: 20px;
 }
 
@@ -341,7 +351,7 @@
   }
 
   .image {
-    block-size: 371px;
+      block-size: 371px;
   }
 
   .image-watermark {
