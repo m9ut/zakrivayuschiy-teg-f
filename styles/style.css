@@ -334,6 +334,7 @@
 
 .modal__dialog-button {
   inline-size: 100%;
+  height: 2.375rem;
   text-transform: uppercase;
   padding: 12.5px;
 }
